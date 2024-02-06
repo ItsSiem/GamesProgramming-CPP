@@ -17,3 +17,5 @@ int findIndex(int[], int, int);
 void sortArray(int[], int);
 
 int greatestCommonDivisor(int, int);
+
+int leastCommonMultiple(int, int);

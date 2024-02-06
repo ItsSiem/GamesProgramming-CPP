@@ -75,3 +75,7 @@ int greatestCommonDivisor(int a, int b) {
     }
     return greatestCommonDivisor(b, a % b);
 }
+
+int leastCommonMultiple(int a, int b) {
+    return (a * b) / greatestCommonDivisor(a, b);
+}

@@ -47,5 +47,13 @@ int main() {
     std::cout << "greatestCommonDivisor(13, 29)" << std::endl;
     std::cout << greatestCommonDivisor(13, 29) << std::endl;
 
+    std::cout << "Exercise 8" << std::endl;
+    std::cout << "leastCommonMultiple(24, 8)" << std::endl;
+    std::cout << leastCommonMultiple(24, 8) << std::endl;
+    std::cout << "leastCommonMultiple(105, 252)" << std::endl;
+    std::cout << leastCommonMultiple(105, 252) << std::endl;
+    std::cout << "leastCommonMultiple(13, 29)" << std::endl;
+    std::cout << leastCommonMultiple(13, 29) << std::endl;
+
     return 0;
 }
