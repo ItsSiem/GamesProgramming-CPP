@@ -42,3 +42,12 @@ bool isPrime(int n) {
     }
     return true;
 }
+
+int findIndex(int array[], int length, int value) {
+    for (int i = 0; i < length; ++i) {
+        if (array[i] == value) {
+            return i;
+        }
+    }
+    return -1;
+}

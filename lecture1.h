@@ -11,3 +11,5 @@ void printEvenOrOdd(int);
 int exponent(int, int);
 
 bool isPrime(int);
+
+int findIndex(int[], int, int);

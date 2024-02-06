@@ -27,5 +27,10 @@ int main() {
     std::cout << "isPrime(420) NOT PRIME" << std::endl;
     std::cout << isPrime(420) << std::endl;
 
+    std::cout << "Exercise 5" << std::endl;
+    std::cout << "findIndex({4, 2, 1, 8}, 4, 1)" << std::endl;
+    int array[] = {4, 2, 1, 8};
+    std::cout << findIndex( array, 4, 1) << std::endl;
+
     return 0;
 }
