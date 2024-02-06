@@ -44,10 +44,26 @@ bool isPrime(int n) {
 }
 
 int findIndex(int array[], int length, int value) {
-    for (int i = 0; i < length; ++i) {
+    for (int i = 0; i < length; i++) {
         if (array[i] == value) {
             return i;
         }
     }
     return -1;
+}
+
+void swap(int* ap, int* bp) {
+    int temp= *ap;
+    *ap = *bp;
+    *bp = temp;
+}
+
+void sortArray(int array[], int length) {
+    for (int i = 0; i < length; i++) {
+        for (int j = 0; j < length; j++) {
+            if(array[j] > array[j + 1]) {
+                swap(&array[j], &array[j + 1]);
+            }
+        }
+    }
 }

@@ -1,8 +1,8 @@
 #include <iostream>
 #include "lecture1.h"
+#include "helpers.h"
 
 int main() {
-
     std::cout << "Exercise 1" << std::endl;
     std::cout << "add(1, 2)" << std::endl;
     std::cout << add(1, 2) << std::endl;
@@ -29,8 +29,15 @@ int main() {
 
     std::cout << "Exercise 5" << std::endl;
     std::cout << "findIndex({4, 2, 1, 8}, 4, 1)" << std::endl;
-    int array[] = {4, 2, 1, 8};
-    std::cout << findIndex( array, 4, 1) << std::endl;
+    int exFive[] = {4, 2, 1, 8};
+    std::cout << findIndex( exFive, 4, 1) << std::endl;
+
+    std::cout << "Exercise 6" << std::endl;
+    std::cout << "sortArray({5, 4, 1, 7 ,6}, 5)" << std::endl;
+    int exSix[] = {5, 4, 1, 7 ,6};
+    printIntArray(exSix, 5);
+    sortArray(exSix, 5);
+    printIntArray(exSix, 5);
 
     return 0;
 }

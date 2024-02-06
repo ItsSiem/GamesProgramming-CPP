@@ -13,3 +13,5 @@ int exponent(int, int);
 bool isPrime(int);
 
 int findIndex(int[], int, int);
+
+void sortArray(int[], int);
