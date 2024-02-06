@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(GP_CPP main.cpp
         lecture1.h
-        lecture1.cpp)
+        lecture1.cpp
+        helpers.cpp
+        helpers.h)
