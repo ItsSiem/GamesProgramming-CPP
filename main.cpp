@@ -39,5 +39,13 @@ int main() {
     sortArray(exSix, 5);
     printIntArray(exSix, 5);
 
+    std::cout << "Exercise 7" << std::endl;
+    std::cout << "greatestCommonDivisor(24, 8)" << std::endl;
+    std::cout << greatestCommonDivisor(24, 8) << std::endl;
+    std::cout << "greatestCommonDivisor(105, 252)" << std::endl;
+    std::cout << greatestCommonDivisor(105, 252) << std::endl;
+    std::cout << "greatestCommonDivisor(13, 29)" << std::endl;
+    std::cout << greatestCommonDivisor(13, 29) << std::endl;
+
     return 0;
 }

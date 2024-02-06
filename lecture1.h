@@ -15,3 +15,5 @@ bool isPrime(int);
 int findIndex(int[], int, int);
 
 void sortArray(int[], int);
+
+int greatestCommonDivisor(int, int);

@@ -67,3 +67,11 @@ void sortArray(int array[], int length) {
         }
     }
 }
+
+// Sauce: https://en.wikipedia.org/wiki/Euclidean_algorithm#Implementations
+int greatestCommonDivisor(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return greatestCommonDivisor(b, a % b);
+}
