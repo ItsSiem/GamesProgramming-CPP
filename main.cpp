@@ -3,19 +3,6 @@
 #include "helpers.h"
 
 int main() {
-    std::cout << "Exercise 1" << std::endl;
-    std::cout << "add(1, 2)" << std::endl;
-    std::cout << add(1, 2) << std::endl;
-
-    std::cout << std::endl;
-
-    std::cout << "Exercise 2" << std::endl;
-    std::cout << "printEvenOrOdd(1)" << std::endl;
-    printEvenOrOdd(1);
-    std::cout << "printEvenOrOdd(2)" << std::endl;
-    printEvenOrOdd(2);
-
-    std::cout << std::endl;
 
     std::cout << "Exercise 3" << std::endl;
     std::cout << "exponent(2, 3)" << std::endl;
