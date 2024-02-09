@@ -7,4 +7,6 @@ add_executable(GP_CPP main.cpp
         lecture1.h
         lecture1.cpp
         helpers.cpp
-        helpers.h)
+        helpers.h
+        lecture2.cpp
+        lecture2.h)
