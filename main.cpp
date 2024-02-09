@@ -3,7 +3,7 @@
 
 int main() {
 
-    showStudents("students.dat");
+    printStudents("students.dat");
 
     return 0;
 }
