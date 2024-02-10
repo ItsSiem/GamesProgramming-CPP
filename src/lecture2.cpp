@@ -82,6 +82,19 @@ bool isPalindrome(char *cstr) {
     return true;
 }
 
+void printFile(const char *filename) {
+    std::ifstream file;
+    file.open(filename);
+    if (file.fail()) {
+        std::cerr << "Could not open " << filename << std::endl;
+    }
+
+    std::string buf;
+    while (getline(file, buf)) {
+        std::cout << buf << std::endl;
+    }
+}
+
 
 void LectureTwoExercises() {
     std::cout << "Exercise 1" << std::endl;
@@ -98,6 +111,7 @@ void LectureTwoExercises() {
     std::cout << "isPalindrome(notthisone) : " << isPalindrome("notthisone") << std::endl;
 
     std::cout << std::endl << "Exercise 4" << std::endl;
+    printFile("../src/lecture2.cpp");
 
     std::cout << std::endl << "Exercise 5" << std::endl;
 }
