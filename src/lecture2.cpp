@@ -95,6 +95,62 @@ void printFile(const char *filename) {
     }
 }
 
+void savePlayerStates(char *filename, PlayerState *states, int stateSize) {
+    std::ofstream file(filename);
+    for (int i = 0; i < stateSize; ++i) {
+        file.write((char *) &states[i], sizeof(PlayerState));
+    }
+    file.close();
+}
+
+void loadPlayerStates(char *filename) {
+    PlayerState player;
+    std::ifstream saveFile(filename, std::ios::binary);
+    std::ofstream namesFile("names.txt");
+    if(saveFile.fail()) {
+        std::cerr << "Could not open " << filename << std::endl;
+    }
+
+    saveFile.read((char *) &player, sizeof(player));
+    while(!saveFile.eof()) {
+        namesFile << player.name << std::endl;
+        saveFile.read((char *) &player, sizeof(player));
+    }
+}
+
+void printPlayer(PlayerState player) {
+    std::cout << player.name << std::endl;
+    std::cout << player.level << " LVL" << std::endl;
+    std::cout << player.experience << " EXP" << std::endl;
+    std::cout << player.health << " HP" << std::endl;
+}
+
+void exerciseFive() {
+    PlayerState players[3];
+    strcpy(players[0].name, "Player One");
+    players[0].level = 1;
+    players[0].health = 75;
+    players[0].experience = 1500;
+
+    strcpy(players[1].name, "Player Two");
+    players[1].level = 18;
+    players[1].health = 98;
+    players[1].experience = 8302;
+
+    strcpy(players[2].name, "Player Three");
+    players[2].level = 58;
+    players[2].health = 120;
+    players[2].experience = 35420;
+
+    for (int i = 0; i < sizeof(players) / sizeof(PlayerState); ++i) {
+        printPlayer(players[i]);
+        std::cout << std::endl;
+    }
+
+    savePlayerStates("game.dat", players, sizeof(players) / sizeof(PlayerState));
+
+    loadPlayerStates("game.dat");
+}
 
 void LectureTwoExercises() {
     std::cout << "Exercise 1" << std::endl;
@@ -114,4 +170,5 @@ void LectureTwoExercises() {
     printFile("../src/lecture2.cpp");
 
     std::cout << std::endl << "Exercise 5" << std::endl;
+    exerciseFive();
 }

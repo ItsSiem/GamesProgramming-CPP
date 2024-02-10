@@ -26,3 +26,10 @@ void exerciseTwo();
 bool isPalindrome(char* cstr);
 
 void printFile(const char* filename);
+
+struct PlayerState {
+    char name[20];
+    int level;
+    double health;
+    int experience;
+};
