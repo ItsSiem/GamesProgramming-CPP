@@ -3,9 +3,13 @@
 //
 
 #include "lecture2.h"
+
+#include <cstring>
+
 #include "lecture1.h"
 #include <fstream>
 #include <iostream>
+#include <sstream>
 
 // vvv Practice during lecture vvv
 void printStudents(const char filename[]) {
@@ -57,6 +61,28 @@ void exerciseTwo() {
     std::cout << "Names: " << count << std::endl;
 }
 
+bool isPalindrome(char *cstr) {
+
+    int length = strlen(cstr);
+
+    char reverse[length];
+    reverse[length] = '\0';
+    for (int i = 0; length-- > 0; i++) {
+        reverse[i] = cstr[length];
+    }
+
+    length = strlen(cstr);
+    for (int i = 0; i <= length; ++i) {
+        char a = reverse[i];
+        char b = cstr[i];
+        if (a != b) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
 void LectureTwoExercises() {
     std::cout << "Exercise 1" << std::endl;
     simplifyFraction(48, 18);
@@ -67,7 +93,9 @@ void LectureTwoExercises() {
     exerciseTwo();
 
     std::cout << "Exercise 3" << std::endl;
-
+    std::cout << "isPalindrome(abba) : "<< isPalindrome("abba") << std::endl;
+    std::cout << "isPalindrome(parterretrap) : " << isPalindrome("parterretrap") << std::endl;
+    std::cout << "isPalindrome(notthisone) : " << isPalindrome("notthisone") << std::endl;
     std::cout << "Exercise 4" << std::endl;
 
     std::cout << "Exercise 5" << std::endl;

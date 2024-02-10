@@ -22,3 +22,5 @@ void LectureTwoExercises();
 void simplifyFraction(int numerator, int denominator);
 
 void exerciseTwo();
+
+bool isPalindrome(char* cstr);
