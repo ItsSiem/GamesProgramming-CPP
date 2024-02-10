@@ -2,8 +2,7 @@
 #include "lecture2.h"
 
 int main() {
-
-    printStudents("students.dat");
+    LectureTwoExercises();
 
     return 0;
 }

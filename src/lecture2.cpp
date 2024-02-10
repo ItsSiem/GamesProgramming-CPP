@@ -3,7 +3,7 @@
 //
 
 #include "lecture2.h"
-
+#include "lecture1.h"
 #include <fstream>
 #include <iostream>
 
@@ -30,3 +30,25 @@ void printStudents(const char filename[]) {
     file.close();
 }
 
+// vvv Exercises vvv
+
+void simplifyFraction(int numerator, int denominator) {
+    int gcd = greatestCommonDivisor(numerator, denominator);
+    std::cout << "Fraction(" << numerator << "/" << denominator << ") = " << numerator / gcd << "/" << denominator / gcd << std::endl;
+}
+
+
+void LectureTwoExercises() {
+    std::cout << "Exercise 1" << std::endl;
+    simplifyFraction(48, 18);
+    simplifyFraction(7, 4);
+    simplifyFraction(15, 90);
+
+    std::cout << "Exercise 2" << std::endl;
+
+    std::cout << "Exercise 3" << std::endl;
+
+    std::cout << "Exercise 4" << std::endl;
+
+    std::cout << "Exercise 5" << std::endl;
+}

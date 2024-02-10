@@ -15,3 +15,8 @@ struct Student {
 };
 
 void printStudents(const char filename[]);
+
+// vvv Exercises vvv
+void LectureTwoExercises();
+
+void simplifyFraction(int numerator, int denominator);
