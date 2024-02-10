@@ -7,6 +7,7 @@
 #include <fstream>
 #include <iostream>
 
+// vvv Practice during lecture vvv
 void printStudents(const char filename[]) {
     Student student;
 
@@ -14,7 +15,7 @@ void printStudents(const char filename[]) {
     file.open(filename, std::ios::binary);
 
     if (file.fail()) {
-        std::cerr << "File could not be opened";
+        std::cerr << filename << " could not be opened" << std::endl;
         return;
     }
 
@@ -28,3 +29,4 @@ void printStudents(const char filename[]) {
     }
     file.close();
 }
+
