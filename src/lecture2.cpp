@@ -89,14 +89,15 @@ void LectureTwoExercises() {
     simplifyFraction(7, 4);
     simplifyFraction(15, 90);
 
-    std::cout << "Exercise 2" << std::endl;
+    std::cout << std::endl << "Exercise 2" << std::endl;
     exerciseTwo();
 
-    std::cout << "Exercise 3" << std::endl;
+    std::cout << std::endl << "Exercise 3" << std::endl;
     std::cout << "isPalindrome(abba) : "<< isPalindrome("abba") << std::endl;
     std::cout << "isPalindrome(parterretrap) : " << isPalindrome("parterretrap") << std::endl;
     std::cout << "isPalindrome(notthisone) : " << isPalindrome("notthisone") << std::endl;
-    std::cout << "Exercise 4" << std::endl;
 
-    std::cout << "Exercise 5" << std::endl;
+    std::cout << std::endl << "Exercise 4" << std::endl;
+
+    std::cout << std::endl << "Exercise 5" << std::endl;
 }
