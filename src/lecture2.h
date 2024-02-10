@@ -20,3 +20,5 @@ void printStudents(const char filename[]);
 void LectureTwoExercises();
 
 void simplifyFraction(int numerator, int denominator);
+
+void exerciseTwo();

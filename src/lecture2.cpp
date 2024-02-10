@@ -37,6 +37,25 @@ void simplifyFraction(int numerator, int denominator) {
     std::cout << "Fraction(" << numerator << "/" << denominator << ") = " << numerator / gcd << "/" << denominator / gcd << std::endl;
 }
 
+void exerciseTwo() {
+    char names[3][7] = { "Albert", "Alan", "Chris" };
+    int count = 0;
+    for (int i = 0; i < sizeof(names) / sizeof(names[0]); i++) {
+        for (int j = 0; j < sizeof(names[0]) / sizeof(char); j++) {
+            char c = names[i][j];
+
+            // If the current character is a NULL and the previous character was an ascii character
+            if(c == '\0') {
+                std::cout << std::endl;
+                count++;
+                break;
+            }
+            std::cout << c;
+        }
+    }
+
+    std::cout << "Names: " << count << std::endl;
+}
 
 void LectureTwoExercises() {
     std::cout << "Exercise 1" << std::endl;
@@ -45,6 +64,7 @@ void LectureTwoExercises() {
     simplifyFraction(15, 90);
 
     std::cout << "Exercise 2" << std::endl;
+    exerciseTwo();
 
     std::cout << "Exercise 3" << std::endl;
 
