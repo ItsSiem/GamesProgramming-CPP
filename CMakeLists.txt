@@ -9,4 +9,6 @@ add_executable(GP_CPP src/main.cpp
         src/helpers.cpp
         src/helpers.h
         src/lecture2.cpp
-        src/lecture2.h)
+        src/lecture2.h
+        src/lecture3.cpp
+        src/lecture3.h)
