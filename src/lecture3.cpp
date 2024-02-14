@@ -47,11 +47,33 @@ void exerciseOne() {
     q = nullptr;
 }
 
+int* createSequence(int n) {
+    int* a = new int[n];
+    for (int i = 0; i < n; ++i) {
+        a[i] = i + 1;
+    }
+    return a;
+}
+
+void exerciseTwo() {
+    int n = 10;
+    int* array = createSequence(n);
+
+    for (int i = 0; i < n; i++) {
+        std::cout << array[i] << " ";
+    }
+    std::cout << std::endl;
+
+    delete array;
+    array = nullptr;
+}
+
 void lectureThreeExercises() {
     std::cout << "Exercise 1" << std::endl;
     exerciseOne();
 
     std::cout << std::endl << "Exercise 2" << std::endl;
+    exerciseTwo();
 
     std::cout << std::endl << "Exercise 3" << std::endl;
 
