@@ -68,6 +68,37 @@ void exerciseTwo() {
     array = nullptr;
 }
 
+int** createPascalsTriangle(int n) {
+    int** rows = new int*[n];
+    for (int i = 0; i < n; ++i) {
+        rows[i] = new int[i + 1];
+        rows[i][0] = 1;
+        rows[i][i] = 1;
+        for (int j = 1; j < i; ++j) {
+            rows[i][j] = rows[i-1][j] + rows[i-1][j-1];
+        }
+    }
+    return rows;
+}
+
+void printPascalsTriangle(int** p, int n) {
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < i + 1; ++j) {
+            std::cout << p[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+}
+
+void cleanPascalsTriangle(int** p, int n) {
+    for (int i = 0; i < n; ++i) {
+        delete p[i];
+        p[i] = nullptr;
+    }
+    delete p;
+    p = nullptr;
+}
+
 void lectureThreeExercises() {
     std::cout << "Exercise 1" << std::endl;
     exerciseOne();
@@ -76,5 +107,8 @@ void lectureThreeExercises() {
     exerciseTwo();
 
     std::cout << std::endl << "Exercise 3" << std::endl;
-
+    int n = 8;
+    int** p = createPascalsTriangle(n);
+    printPascalsTriangle(p, n);
+    cleanPascalsTriangle(p, n);
 }
