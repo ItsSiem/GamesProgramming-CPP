@@ -1,9 +1,9 @@
 #include <iostream>
-#include "lecture3.h"
+#include "lecture_4/lecture4.h"
 
 int main() {
 
-    lectureThreeExercises();
+    printLecturePractice();
 
     return 0;
 }
