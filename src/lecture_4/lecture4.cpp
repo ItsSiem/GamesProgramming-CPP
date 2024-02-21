@@ -9,6 +9,7 @@
 
 #include "ClothingStore.h"
 #include "MyClass.h"
+#include "MyStack.h"
 
 void printLecturePractice() {
     std::cout << "vvv Practice during lecture vvv" << std::endl;
@@ -31,4 +32,16 @@ void printLecturePractice() {
     test1.print();
     test1.setP(30);
     test1.print();
+
+    std::cout << "Exercise 2" << std::endl;
+    MyStack stack;
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+
+    stack.print();
+
+    std::cout << "popped: " << stack.pop() << std::endl;
+
+    stack.print();
 }
