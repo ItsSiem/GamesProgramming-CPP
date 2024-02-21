@@ -17,4 +17,6 @@ add_executable(GP_CPP src/main.cpp
         src/lecture_4/Trousers.cpp
         src/lecture_4/Trousers.h
         src/lecture_4/Jacket.cpp
-        src/lecture_4/Jacket.h)
+        src/lecture_4/Jacket.h
+        src/lecture_4/MyClass.cpp
+        src/lecture_4/MyClass.h)
