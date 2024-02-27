@@ -21,4 +21,8 @@ add_executable(GP_CPP src/main.cpp
         src/lecture_4/MyClass.cpp
         src/lecture_4/MyClass.h
         src/lecture_4/MyStack.cpp
-        src/lecture_4/MyStack.h)
+        src/lecture_4/MyStack.h
+        src/lecture_5/MyString.cpp
+        src/lecture_5/MyString.h
+        src/lecture_5/lecture5.cpp
+        src/lecture_5/lecture5.h)
