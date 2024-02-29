@@ -24,10 +24,11 @@ public:
     MyString& toupper() const;
     MyString& tolower() const;
 
-    char* toString();
-    int length();
+    char* toString() const;
+    int length() const;
 };
 
+bool operator ==(const MyString&, const MyString&);
 bool operator !=(const MyString&, const MyString&);
 bool operator < (const MyString&, const MyString&);
 bool operator > (const MyString&, const MyString&);

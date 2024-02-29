@@ -141,11 +141,25 @@ MyString &MyString::tolower() const {
 }
 
 
-char* MyString::toString() {
+char* MyString::toString() const {
     return str;
 }
 
-int MyString::length() {
+int MyString::length() const {
     return len;
 }
 
+bool operator ==(const MyString& a, const MyString& b) {
+    if (a.length() != b.length())
+        return false;
+    for (int i = 0; i < a.length(); ++i) {
+        if (a[i] != b[i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+bool operator !=(const MyString& a, const MyString& b) {
+    return !(a == b);
+}

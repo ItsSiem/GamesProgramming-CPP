@@ -37,4 +37,8 @@ void lecture5_practice() {
     MyString str8("tOlOwEr");
     std::cout << str8.tolower().toString() << std::endl;
 
+    MyString str9("12345");
+    MyString str10("12345");
+    std::cout << (str9 == str10) << std::endl;
+
 }
