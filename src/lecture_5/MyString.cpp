@@ -54,6 +54,28 @@ MyString &MyString::operator=(const MyString &s) {
     return *this;
 }
 
+MyString &MyString::operator+=(const MyString &s) {
+    MyString ostr = *this;
+    int olen = len;
+    delete[] str;
+
+    len += s.len;
+    str = new char[len + 1];
+
+    int i = 0;
+    while (ostr.str[i] != '\0') {
+        str[i] = ostr.str[i];
+        i++;
+    }
+    while (i <= len) {
+        str[i] = s.str[i - olen];
+        i++;
+    }
+    return *this;
+}
+
+
+
 
 char* MyString::toString() {
     return str;

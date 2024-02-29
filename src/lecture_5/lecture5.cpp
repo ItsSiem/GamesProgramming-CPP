@@ -17,8 +17,11 @@ void lecture5_practice() {
     std::cout << "str=" << str2.toString() << std::endl;
     std::cout << "len=" << str2.length() << std::endl;
 
-    MyString str3;
-    str3 = str1;
+    MyString str3("First");
+    MyString str4("Second");
+    str3 += str4;
     std::cout << "str=" << str3.toString() << std::endl;
     std::cout << "len=" << str3.length() << std::endl;
+
+
 }
