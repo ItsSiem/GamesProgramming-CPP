@@ -24,9 +24,12 @@ void lecture5_practice() {
     std::cout << "len=" << str3.length() << std::endl;
 
     MyString str5("First Second Third");
-    str5.replace(6, 0,  MyString("Too long of a string"));
+    str5.replace(6, 0,  MyString("First"));
     std::cout << "str=" << str5.toString() << std::endl;
     std::cout << "len=" << str5.length() << std::endl;
 
+    MyString str6("abcdefg");
+    MyString search("cde");
+    std::cout << str6.toString() << " search " << search.toString() << " " << str6.search(search) << std::endl;
 
 }
