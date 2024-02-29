@@ -78,6 +78,12 @@ char MyString::operator[](const int i) const {
     return str[i];
 }
 
+void MyString::replace(const int begin, const int end, const MyString& string) {
+    // TODO: Why would we need the end index?
+    for (int i = begin; i < len && i - begin < string.len; ++i) {
+        str[i] = string[i - begin];
+    }
+}
 
 
 char* MyString::toString() {

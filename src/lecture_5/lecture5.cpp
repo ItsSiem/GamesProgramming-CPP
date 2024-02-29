@@ -23,5 +23,10 @@ void lecture5_practice() {
     std::cout << "str=" << str3.toString() << std::endl;
     std::cout << "len=" << str3.length() << std::endl;
 
+    MyString str5("First Second Third");
+    str5.replace(6, 0,  MyString("Too long of a string"));
+    std::cout << "str=" << str5.toString() << std::endl;
+    std::cout << "len=" << str5.length() << std::endl;
+
 
 }
