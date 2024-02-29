@@ -63,17 +63,20 @@ MyString &MyString::operator+=(const MyString &s) {
     str = new char[len + 1];
 
     int i = 0;
-    while (ostr.str[i] != '\0') {
-        str[i] = ostr.str[i];
+    while (ostr[i] != '\0') {
+        str[i] = ostr[i];
         i++;
     }
     while (i <= len) {
-        str[i] = s.str[i - olen];
+        str[i] = s[i - olen];
         i++;
     }
     return *this;
 }
 
+char MyString::operator[](const int i) const {
+    return str[i];
+}
 
 
 
