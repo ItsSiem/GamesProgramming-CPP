@@ -32,4 +32,9 @@ void lecture5_practice() {
     MyString search("cde");
     std::cout << str6.toString() << " search " << search.toString() << " " << str6.search(search) << std::endl;
 
+    MyString str7("tOuPpEr");
+    std::cout << str7.toupper().toString() << std::endl;
+    MyString str8("tOlOwEr");
+    std::cout << str8.tolower().toString() << std::endl;
+
 }

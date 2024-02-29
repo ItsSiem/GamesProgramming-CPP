@@ -98,6 +98,48 @@ bool MyString::search(const MyString string) const {
     return false;
 }
 
+char ctoupper(char c) {
+    if(islower(c)) {
+        return c - 32;
+    }
+    return c;
+}
+
+char ctolower(char c) {
+    if(isupper(c)) {
+        return c + 32;
+    }
+    return c;
+}
+
+bool isupper(char c) {
+    const int ascii_upper_start = 65;
+    const int ascii_upper_end = 90;
+    return c >= ascii_upper_start && c <= ascii_upper_end;
+}
+
+bool islower(char c) {
+    const int ascii_lower_start = 97;
+    const int ascii_lower_end = 122;
+    return c >= ascii_lower_start && c <= ascii_lower_end;
+}
+
+MyString &MyString::toupper() const {
+    MyString* s = new MyString(str);
+    for (int i = 0; i < len; ++i) {
+        s->str[i] = ctoupper(str[i]);
+    }
+    return *s;
+}
+
+MyString &MyString::tolower() const {
+    MyString* s = new MyString(str);
+    for (int i = 0; i < len; ++i) {
+        s->str[i] = ctolower(str[i]);
+    }
+    return *s;
+}
+
 
 char* MyString::toString() {
     return str;

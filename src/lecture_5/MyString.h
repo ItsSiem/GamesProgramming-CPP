@@ -21,8 +21,8 @@ public:
     char operator[](const int) const;
     void replace(const int begin, const int end, const MyString&);
     bool search(const MyString) const;
-    // MyString& toupper() const;
-    // MyString& tolower() const;
+    MyString& toupper() const;
+    MyString& tolower() const;
 
     char* toString();
     int length();
