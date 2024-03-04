@@ -55,21 +55,13 @@ MyString &MyString::operator=(const MyString &s) {
 }
 
 MyString &MyString::operator+=(const MyString &s) {
-    MyString ostr = *this;
-    int olen = len;
+    MyString concat = *this + s;
+    len = concat.length();
     delete[] str;
-
-    len += s.len;
-    str = new char[len + 1];
-
-    int i = 0;
-    while (ostr[i] != '\0') {
-        str[i] = ostr[i];
-        i++;
-    }
-    while (i <= len) {
-        str[i] = s[i - olen];
-        i++;
+    str = new char[len];
+    // Todo: Ask how this can be done cleaner
+    for (int i = 0; i <= len; ++i) {
+        str[i] = concat[i];
     }
     return *this;
 }
@@ -163,3 +155,60 @@ bool operator ==(const MyString& a, const MyString& b) {
 bool operator !=(const MyString& a, const MyString& b) {
     return !(a == b);
 }
+
+bool operator<(const MyString& a, const MyString& b) {
+    int length = std::max(a.length(), b.length());
+    MyString a_normalized = a.tolower();
+    MyString b_normalized = b.tolower();
+
+    while (a_normalized.length() < length) {
+        a_normalized += "_";
+    }
+    while (b_normalized.length() < length) {
+        b_normalized += "_";
+    }
+
+    // Search for the first inequality
+    for (int i = 0; i < length; ++i) {
+        if(a_normalized[i] != b_normalized[i]) {
+            return a_normalized[i] < b_normalized[i];
+        }
+    }
+}
+
+bool operator>(const MyString& a, const MyString& b) {
+    int length = std::max(a.length(), b.length());
+    MyString a_normalized = a.tolower();
+    MyString b_normalized = b.tolower();
+
+    while (a_normalized.length() < length) {
+        a_normalized += "_";
+    }
+    while (b_normalized.length() < length) {
+        b_normalized += "_";
+    }
+
+    // Search for the first inequality
+    for (int i = 0; i < length; ++i) {
+        if(a_normalized[i] != b_normalized[i]) {
+            return a_normalized[i] > b_normalized[i];
+        }
+    }
+}
+
+MyString operator+(const MyString& a, const MyString& b) {
+    int length = a.length() + b.length();
+    char* str = new char[length + 1];
+
+    int i = 0;
+    while (a[i] != '\0') {
+        str[i] = a[i];
+        i++;
+    }
+    while (i <= length) {
+        str[i] = b[i - a.length()];
+        i++;
+    }
+    return *new MyString(str);
+}
+

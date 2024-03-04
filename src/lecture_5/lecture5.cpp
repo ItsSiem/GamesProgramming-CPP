@@ -41,4 +41,16 @@ void lecture5_practice() {
     MyString str10("12345");
     std::cout << (str9 == str10) << std::endl;
 
+    MyString str11("abc");
+    MyString str12("def");
+    std::cout << (str11 + str12).toString() << std::endl;
+
+    MyString str13("aaa");
+    MyString str14("aab");
+    std::cout << (str13 < str14) << std::endl;
+
+    MyString str15("xx");
+    MyString str16("aaaaaa");
+    std::cout << (str15 < str16) << std::endl;
+
 }
