@@ -212,3 +212,7 @@ MyString operator+(const MyString& a, const MyString& b) {
     return *new MyString(str);
 }
 
+std::ostream& operator<<(std::ostream& stream, const MyString& string) {
+    stream << string.toString();
+    return stream;
+}

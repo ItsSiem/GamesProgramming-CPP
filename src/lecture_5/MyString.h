@@ -33,6 +33,6 @@ bool operator !=(const MyString&, const MyString&);
 bool operator < (const MyString&, const MyString&);
 bool operator > (const MyString&, const MyString&);
 MyString operator+ (const MyString&, const MyString&);
-std::ostream & operator<<(std::ostream, const MyString&);
+std::ostream & operator<<(std::ostream&, const MyString&);
 
 #endif //MYSTRING_H
